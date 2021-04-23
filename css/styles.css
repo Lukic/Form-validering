@@ -23,6 +23,7 @@ body {
 #right-side {
   width: 50%;
   padding: 2em;
+  box-sizing: border-box;
 }
 
 #right-side {
@@ -137,4 +138,24 @@ input[type="submit"] {
   color: #fff;
   border: none;
   outline: none;
+}
+
+/*Desktop 769 ->*/
+
+/*Tablet: 768px */
+
+/*Mobil <- 767*/
+@media screen and (max-width: 768px) {
+  #form-container {
+    flex-direction: column-reverse;
+  }
+
+  #left-side,
+  #right-side {
+    width: 100%;
+  }
+
+  #right-side {
+    height: 250px;
+  }
 }
