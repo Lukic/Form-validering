@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formvalidering</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!--
+
+        1) Definition af korrekte type.
+        2) Påkrævet felter
+        3) Styling :required, :invalid , :valid , :invalid:required, 
+
+
+    -->
+    <section id="form-container">
+      <section id="left-side">
+        <h1>Form validering</h1>
+        <form>
+          <input
+            required
+            minlength="2"
+            maxlength="25"
+            id="name"
+            type="text"
+            placeholder="Skriv dit navn"
+          />
+          <input id="dogname" type="text" placeholder="Hvad hedder din hund?" />
+          <input
+            required
+            id="email"
+            type="email"
+            placeholder="Skriv din e-mail"
+          />
+          <input
+            required
+            id="adgangskode"
+            type="password"
+            minlength="6"
+            maxlength="16"
+            placeholder="Skriv din adgangskode"
+          />
+          <input
+            required
+            name="bday"
+            type="date"
+            min="2021-01-01"
+            max="2021-04-30"
+            placeholder="Vælg en dato"
+          />
+          <input
+            required
+            min="1"
+            max="10"
+            id="number"
+            type="number"
+            placeholder="Skriv et tal imellem 1 og 10"
+          />
+
+          <div>
+            <input
+              required
+              type="radio"
+              name="radio-choice"
+              id="radio-choice-1"
+              value="choice-1"
+            />
+            <label for="radio-choice-1">Mac</label>
+
+            <input
+              required
+              type="radio"
+              name="radio-choice"
+              id="radio-choice-2"
+              value="choice-2"
+            />
+            <label for="radio-choice-2">PC</label>
+
+            <input
+              required
+              type="radio"
+              name="radio-choice"
+              id="radio-choice-3"
+              value="choice-3"
+            />
+            <label for="radio-choice-3">LINUX</label>
+          </div>
+
+          <input type="submit" name="submit" value="Send" />
+        </form>
+      </section>
+      <section id="right-side"></section>
+    </section>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
