@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formvalidering</title>
     <link rel="stylesheet" href="css/styles.css" />
+
+    <script src="js/scripts.js" defer></script>
   </head>
   <body>
     <!--
@@ -19,24 +21,18 @@
     <section id="form-container">
       <section id="left-side">
         <h1>Form validering</h1>
-        <form>
+        <form id="contact-form">
           <input
-            required
             minlength="2"
             maxlength="25"
             id="name"
             type="text"
             placeholder="Skriv dit navn"
           />
+
           <input id="dogname" type="text" placeholder="Hvad hedder din hund?" />
+          <input id="email" type="email" placeholder="Skriv din e-mail" />
           <input
-            required
-            id="email"
-            type="email"
-            placeholder="Skriv din e-mail"
-          />
-          <input
-            required
             id="adgangskode"
             type="password"
             minlength="6"
@@ -44,7 +40,6 @@
             placeholder="Skriv din adgangskode"
           />
           <input
-            required
             name="bday"
             type="date"
             min="2021-01-01"
@@ -52,7 +47,6 @@
             placeholder="Vælg en dato"
           />
           <input
-            required
             min="1"
             max="10"
             id="number"
@@ -62,7 +56,6 @@
 
           <div>
             <input
-              required
               type="radio"
               name="radio-choice"
               id="radio-choice-1"
@@ -71,7 +64,6 @@
             <label for="radio-choice-1">Mac</label>
 
             <input
-              required
               type="radio"
               name="radio-choice"
               id="radio-choice-2"
@@ -80,7 +72,6 @@
             <label for="radio-choice-2">PC</label>
 
             <input
-              required
               type="radio"
               name="radio-choice"
               id="radio-choice-3"
@@ -89,12 +80,11 @@
             <label for="radio-choice-3">LINUX</label>
           </div>
 
-          <input type="submit" name="submit" value="Send" />
+          <button type="submit">Send</button>
+          <button type="reset">Slet alt</button>
         </form>
       </section>
       <section id="right-side"></section>
     </section>
-
-    <script src="js/scripts.js"></script>
   </body>
 </html>
